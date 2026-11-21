@@ -54,7 +54,7 @@ RULESET:
 - - 🛡️ 隐私防护
   - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/BanEasyPrivacy.list
 - - 🪐 反重力
-  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/agy.list
+  - https://gh-proxy.org/https://raw.githubusercontent.com/biner/SubConv/refs/heads/main/Clash/agy.list
 - - 📢 谷歌FCM
   - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/GoogleFCM.list
 - - 📢 谷歌服务
