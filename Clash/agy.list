@@ -1,0 +1,14 @@
+# Google Antigravity / Gemini Code Assist 专用出口
+# 用于 subconverter 本地规则集：ruleset=<策略组>,rules/agy.list
+# 格式：每行一条规则，不写策略（策略由 ini 的 ruleset= 行指定）
+# 注意：必须排在 Google 规则集之前，否则会被 google 规则先命中
+
+DOMAIN-KEYWORD,antigravity
+DOMAIN,cloudcode-pa.googleapis.com
+DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN,cloudaicompanion.googleapis.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,aicode.googleapis.com
+DOMAIN,firebaselogging-pa.googleapis.com
+DOMAIN-SUFFIX,antigravity.google
+DOMAIN,play.googleapis.com
