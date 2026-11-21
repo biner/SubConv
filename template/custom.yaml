@@ -135,8 +135,8 @@ CUSTOM_PROXY_GROUP:
   regex: (?i:(?:\bAI\b|人工智能|OpenAI|ChatGPT|GPT|Claude|Gemini|Bard|Copilot|Perplexity|Poe|Grok))
 - name: 🪐 反重力
   type: select
-  rule: false
-  regex: (?i:(?:反重力|Anti[-.\s]?Gravity|\bAG\b))
+  rule: true
+  prior: PROXY
 - name: 🔯 故障转移
   type: fallback
   rule: false
