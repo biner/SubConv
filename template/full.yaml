@@ -1,0 +1,231 @@
+HEAD:
+  mixed-port: 5330
+  tproxy-port: 7893
+  allow-lan: true
+  bind-address: '*'
+  mode: rule
+  log-level: info
+  ipv6: true
+  external-controller: 0.0.0.0:9090
+  secret: 92bdba48b5f3ef9ea35b20e0f26a979e
+  external-ui: ui
+  external-ui-name: metacubexd
+  external-ui-url: https://github.com/MetaCubeX/metacubexd/releases/latest/download/compressed-dist.tgz
+  geo-auto-update: false
+  geodata-mode: false
+  dns:
+    enable: true
+    ipv6: true
+    listen: 0.0.0.0:1053
+    enhanced-mode: redir-host
+    default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    nameserver:
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
+  sniffer:
+    enable: true
+    force-dns-mapping: true
+    parse-pure-ip: true
+    override-destination: true
+    sniff:
+      HTTP:
+        ports: [80, 8080-8880]
+      TLS:
+        ports: [443, 8443]
+      QUIC:
+        ports: [443, 8443]
+    skip-domain:
+    - Mijia Cloud
+    - +.push.apple.com
+TEST_URL: https://www.gstatic.com/generate_204
+RULESET:
+- - 🚀 节点选择
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/PlayStore.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/CFnat.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/LocalAreaNetwork.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/UnBan.list
+- - 🛑 广告拦截
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/BanAD.list
+- - 🍃 应用净化
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/adobe.list
+- - 🍃 应用净化
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/IDM.list
+- - 🍃 应用净化
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/BanProgramAD.list
+- - 🤖 OpenAi
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/OpenAi.list
+- - 🤖 OpenAi
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/ai.list
+- - 🤖 OpenAi
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Copilot.list
+- - 🤖 OpenAi
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/GithubCopilot.list
+- - 🤖 OpenAi
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Claude.list
+- - ☁️ CloudFlareCDN
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/CloudflareCIDR.list
+- - 📢 谷歌FCM
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/GoogleFCM.list
+- - 🚀 节点选择
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/GoogleCN.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/SteamCN.list
+- - Ⓜ️ 微软Bing
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Bing.list
+- - Ⓜ️ 微软云盘
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/OneDrive.list
+- - Ⓜ️ 微软服务
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Microsoft.list
+- - 🍎 苹果服务
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Apple.list
+- - 📲 电报消息
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Telegram.list
+- - 🎶 网易音乐
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/NetEaseMusic.list
+- - 🎮 游戏平台
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Epic.list
+- - 🎮 游戏平台
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Origin.list
+- - 🎮 游戏平台
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Sony.list
+- - 🎮 游戏平台
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Steam.list
+- - 🎮 游戏平台
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Nintendo.list
+- - 📹 油管视频
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/YouTube.list
+- - 🎥 奈飞视频
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Netflix.list
+- - 📺 巴哈姆特
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Bahamut.list
+- - 📺 哔哩哔哩
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/BilibiliHMT.list
+- - 📺 哔哩哔哩
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Ruleset/Bilibili.list
+- - 🌏 国内媒体
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ChinaMedia.list
+- - 🌍 国外媒体
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ProxyMedia.list
+- - 🌍 国外媒体
+  - https://gh-proxy.org/https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/Emby.list
+- - 🚀 节点选择
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ProxyGFWlist.list
+- - 🚀 节点选择
+  - https://gh-proxy.org/https://raw.githubusercontent.com/UlinoyaPed/ShellClash/dev/lists/proxy.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/UlinoyaPed/ShellClash/dev/lists/direct.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ChinaDomain.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/ChinaCompanyIp.list
+- - 🎯 全球直连
+  - https://gh-proxy.org/https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/Download.list
+- - ☁️ CloudFlareCDN
+  - '[]GEOIP,cloudflare'
+- - 🎯 全球直连
+  - '[]GEOIP,CN'
+- - 🐟 漏网之鱼
+  - '[]FINAL'
+CUSTOM_PROXY_GROUP:
+- name: ☑️ 手动切换
+  type: select
+  manual: true
+  rule: false
+- name: ♻️ 自动选择
+  type: url-test
+  rule: false
+- name: 📶 官方优选
+  type: load-balance
+  rule: false
+  regex: (官方|防|电信|联通|移动|CT|CU|CM|CF|t\.me|WARP|Warp|warp)
+- name: 🇭🇰 香港节点
+  type: url-test
+  rule: false
+  regex: (?i:\b(?:HK|HKG)\d*\b|Hong.*?Kong|\bHKT\b|\bHKBN\b|\bHGC\b|\bWTT\b|\bCMI\b|[^-]港)
+- name: 🇹🇼 台湾节点
+  type: url-test
+  rule: false
+  regex: (?i:\b(?:TW|TWN)\d*\b|Taiwan|新北|彰化|\bCHT\b|台湾|[^-]台|\bHINET\b)
+- name: 🇸🇬 狮城节点
+  type: url-test
+  rule: false
+  regex: (?i:\b(?:SG|SGP)\d*\b|Singapore|新加坡|狮城|[^-]新)
+- name: 🇯🇵 日本节点
+  type: url-test
+  rule: false
+  regex: (?i:\b(?:JP|JPN)\d*\b|Japan|Tokyo|Osaka|Saitama|日本|东京|大阪|埼玉|川日|泉日|沪日|深日|[^-]日)
+- name: 🇺🇲 美国节点
+  type: url-test
+  rule: false
+  regex: (?i:\b(?:US|USA)\d*\b|America|United.*?States|美国|[^-]美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)
+- name: 🇰🇷 韩国节点
+  type: url-test
+  rule: false
+  regex: (?i:(?<!North\s)(\b(?:KR|KOR)\d*\b|Korea|首尔|春川|韩|韓))
+- name: 🤖 OpenAi
+  type: select
+  prior: PROXY
+- name: ☁️ CloudFlareCDN
+  type: select
+  prior: PROXY
+- name: 📲 电报消息
+  type: select
+  prior: PROXY
+- name: 📹 油管视频
+  type: select
+  prior: PROXY
+- name: 🎥 奈飞视频
+  type: select
+  prior: PROXY
+- name: 📺 巴哈姆特
+  type: select
+  prior: PROXY
+- name: 📺 哔哩哔哩
+  type: select
+  prior: DIRECT
+- name: 🌍 国外媒体
+  type: select
+  prior: PROXY
+- name: 🌏 国内媒体
+  type: select
+  prior: DIRECT
+- name: 📢 谷歌FCM
+  type: select
+  prior: DIRECT
+- name: Ⓜ️ 微软Bing
+  type: select
+  prior: DIRECT
+- name: Ⓜ️ 微软云盘
+  type: select
+  prior: DIRECT
+- name: Ⓜ️ 微软服务
+  type: select
+  prior: DIRECT
+- name: 🍎 苹果服务
+  type: select
+  prior: DIRECT
+- name: 🎮 游戏平台
+  type: select
+  prior: DIRECT
+- name: 🎶 网易音乐
+  type: select
+  prior: DIRECT
+- name: 🎯 全球直连
+  type: select
+  prior: DIRECT
+- name: 🛑 广告拦截
+  type: select
+  prior: REJECT
+- name: 🍃 应用净化
+  type: select
+  prior: REJECT
+- name: 🐟 漏网之鱼
+  type: select
+  prior: PROXY
